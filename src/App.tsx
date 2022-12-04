@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+// import reactLogo from './assets/react.svg'
+import reactLogo from '@src/assets/react.svg'
+import primeLogo from './assets/primereact-logo-dark.svg'
 import './App.css'
+import { Button } from 'primereact/button'
 
 function App () {
   const [count, setCount] = useState(0)
-  // const hello: number = 'abc'
 
   return (
     <div className="App">
-      <p className='btn-primary'>Hello</p>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -16,12 +17,15 @@ function App () {
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+        <a href="https://www.primefaces.org/primereact" target="_blank" rel="noreferrer">
+          <img src={primeLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className='text-gray-700'>Vite + React + Unocss + PrimeReact</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
